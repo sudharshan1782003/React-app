@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Additems from './Additem'
-import ApiRequest from "./Apirequest"
+import ApiRequest from "./ApiRequest"
 
 const App = () => {
   const [items, setitems] = React.useState("")
