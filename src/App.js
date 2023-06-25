@@ -1,15 +1,28 @@
 import React from 'react'
-import Header from './header'
-import Additems from './Additems'
+import Squares from './Squares'
+import Toggletext from './toggletext'
 
 const App = () => {
+    const [Colorchange, setColorchange] = React.useState("")
+  const [isText, setIsdarktext] = React.useState("")
+
+  React.useEffect(() => {
+    console.log("rendered")
+  }, [Colorchange])
+
   return (
-    <main className='p-5'>
-   
-   <Header />
-   <Additems />
-  
-   </main>
+   <div className='mt-5'>
+    <Squares
+    Colorchange = {Colorchange}
+    setColorchange = {setColorchange}
+    isText = {isText}
+    setIsdarktext = {setIsdarktext}
+    />
+    <Toggletext
+     isText = {isText}
+     setIsdarktext = {setIsdarktext}
+     />
+   </div>
   )
 }
 
